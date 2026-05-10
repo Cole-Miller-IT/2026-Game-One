@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://dngtcirere5dg"]
+
+[ext_resource type="Script" uid="uid://b8tctpkcyd7fd" path="res://boot-screen/boot_screen.gd" id="1_3a61i"]
+[ext_resource type="Texture2D" uid="uid://dc2f1jffx4480" path="res://boot-screen/logo_large_color_light.svg" id="1_y5dhs"]
+[ext_resource type="PackedScene" uid="uid://8tjsi6jlhius" path="res://home-screen/home-screen.tscn" id="2_7yh5k"]
+
+[node name="BootScreenManager" type="Control" unique_id=2027565650 node_paths=PackedStringArray("splashScreen")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_3a61i")
+loadScene = ExtResource("2_7yh5k")
+splashScreen = NodePath("CenterContainer/TextureRect")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1903030203]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 984.0
+offset_bottom = 408.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1968407112]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer" unique_id=285069860]
+layout_mode = 2
+texture = ExtResource("1_y5dhs")
