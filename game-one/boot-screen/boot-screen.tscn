@@ -3,15 +3,16 @@
 [ext_resource type="Script" uid="uid://b8tctpkcyd7fd" path="res://boot-screen/boot_screen.gd" id="1_3a61i"]
 [ext_resource type="Texture2D" uid="uid://dc2f1jffx4480" path="res://boot-screen/logo_large_color_light.svg" id="1_y5dhs"]
 [ext_resource type="PackedScene" uid="uid://8tjsi6jlhius" path="res://home-screen/home-screen.tscn" id="2_7yh5k"]
+[ext_resource type="Texture2D" uid="uid://df4t8k0u7itjo" path="res://home-screen/logo.svg" id="4_7yh5k"]
 
-[node name="BootScreenManager" type="Control" unique_id=2027565650 node_paths=PackedStringArray("splashScreen")]
+[node name="BootScreenManager" type="Control" unique_id=2027565650 node_paths=PackedStringArray("splashScreenContainer")]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_3a61i")
 loadScene = ExtResource("2_7yh5k")
-splashScreen = NodePath("CenterContainer/TextureRect")
+splashScreenContainer = NodePath("BootScreenContainer")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1903030203]
 layout_mode = 1
@@ -24,11 +25,15 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1968407112]
+[node name="BootScreenContainer" type="CenterContainer" parent="." unique_id=1968407112]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="TextureRect" type="TextureRect" parent="CenterContainer" unique_id=285069860]
+[node name="GodotScreen" type="TextureRect" parent="BootScreenContainer" unique_id=285069860]
 layout_mode = 2
 texture = ExtResource("1_y5dhs")
+
+[node name="MyLogoScreen" type="TextureRect" parent="BootScreenContainer" unique_id=1770473342]
+layout_mode = 2
+texture = ExtResource("4_7yh5k")
