@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bu7aaf18havbb" path="res://home-screen/background.svg" id="1_xersy"]
 [ext_resource type="Texture2D" uid="uid://df4t8k0u7itjo" path="res://home-screen/logo.svg" id="2_5x8sa"]
 [ext_resource type="AudioStream" uid="uid://rwvvn10lkkbg" path="res://home-screen/mainMenuMusic Pixel Dreams.mp3" id="3_5x8sa"]
+[ext_resource type="Script" uid="uid://bfg5hxsar1j57" path="res://home-screen/button_start.gd" id="3_ebm3x"]
 
 [node name="Background" type="TextureRect" unique_id=1668674139]
 offset_right = 40.0
@@ -23,15 +24,18 @@ offset_right = 796.0
 offset_bottom = 447.0
 text = "(c) 2026 Cool VFX Games"
 
-[node name="Button" type="Button" parent="." unique_id=761241735]
+[node name="Button-start" type="Button" parent="." unique_id=761241735]
 layout_mode = 0
 offset_left = 352.0
 offset_top = 344.0
 offset_right = 478.0
 offset_bottom = 375.0
 text = "Start"
+script = ExtResource("3_ebm3x")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=744469779]
 stream = ExtResource("3_5x8sa")
 volume_db = -15.409
 autoplay = true
+
+[connection signal="pressed" from="Button-start" to="Button-start" method="_on_pressed"]
