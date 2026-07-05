@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EntityStats" format=3 uid="uid://dg5e385q250c4"]
+
+[ext_resource type="Script" uid="uid://cit85p7ehuum1" path="res://entities/entity-stats.gd" id="1_a6ghg"]
+[ext_resource type="Texture2D" uid="uid://cp4ta1585f7jh" path="res://entities/enemies/enemy-two/ship_0019.png" id="2_6vb7n"]
+
+[resource]
+script = ExtResource("1_a6ghg")
+health = 100.0
+damage = 10.0
+speed = 10.0
+texture = ExtResource("2_6vb7n")

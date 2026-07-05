@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dnwq4mqohh0hw"]
+
+[ext_resource type="Script" uid="uid://bie01bb0n545s" path="res://entities/enemies/enemy-two/enemy_two.gd" id="1_x8guf"]
+[ext_resource type="Resource" uid="uid://dg5e385q250c4" path="res://entities/enemies/enemy-two/enemy_two.tres" id="2_6m1uf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+
+[node name="EnemyTwo" type="CharacterBody2D" unique_id=2452014]
+script = ExtResource("1_x8guf")
+stats = ExtResource("2_6m1uf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1793767087]
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=491858369]

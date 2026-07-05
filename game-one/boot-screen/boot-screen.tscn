@@ -19,21 +19,27 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 984.0
-offset_bottom = 408.0
+offset_right = 600.0
+offset_bottom = 320.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="BootScreenContainer" type="CenterContainer" parent="." unique_id=1968407112]
-layout_mode = 0
+[node name="BootScreenContainer" type="Control" parent="." unique_id=648418080]
+anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="GodotScreen" type="TextureRect" parent="BootScreenContainer" unique_id=285069860]
-layout_mode = 2
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
 texture = ExtResource("1_y5dhs")
+expand_mode = 1
 
 [node name="MyLogoScreen" type="TextureRect" parent="BootScreenContainer" unique_id=1770473342]
-layout_mode = 2
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
 texture = ExtResource("4_7yh5k")
+expand_mode = 1

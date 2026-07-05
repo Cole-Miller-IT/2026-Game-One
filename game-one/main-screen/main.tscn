@@ -2,8 +2,17 @@
 
 [ext_resource type="Script" uid="uid://ca8xhwlei8mvr" path="res://main-screen/main.gd" id="1_b6m0h"]
 [ext_resource type="PackedScene" uid="uid://dgblsbea0txh8" path="res://entities/player/player.tscn" id="2_ka83u"]
+[ext_resource type="PackedScene" uid="uid://c5rqcyonjx2un" path="res://entities/enemies/enemy-one/enemy_one.tscn" id="2_pew6s"]
+[ext_resource type="PackedScene" uid="uid://dnwq4mqohh0hw" path="res://entities/enemies/enemy-two/enemy_two.tscn" id="4_r14o7"]
 
 [node name="Main" type="Node" unique_id=1171523036]
 script = ExtResource("1_b6m0h")
 
 [node name="CharacterBody2D" parent="." unique_id=192764 instance=ExtResource("2_ka83u")]
+position = Vector2(320, 192)
+
+[node name="EnemyOne" parent="." unique_id=1743876052 instance=ExtResource("2_pew6s")]
+position = Vector2(256, 64)
+
+[node name="EnemyTwo" parent="." unique_id=2452014 instance=ExtResource("4_r14o7")]
+position = Vector2(320, 64)
